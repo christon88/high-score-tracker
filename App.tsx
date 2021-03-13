@@ -1,13 +1,13 @@
-import "react-native-gesture-handler";
-import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./Components/HomeScreen";
-import GamePage from "./Components/GamePage";
-import { routes } from "./router";
+import 'react-native-gesture-handler'
+import { NavigationContainer } from '@react-navigation/native'
+import React from 'react'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { createStackNavigator } from '@react-navigation/stack'
+import HomeScreen from './components/HomeScreen'
+import GamePage from './components/GamePage'
+import { routes } from './router'
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
@@ -19,5 +19,5 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
-  );
+  )
 }

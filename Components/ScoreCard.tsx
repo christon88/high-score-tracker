@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { ListItem } from "react-native-elements";
-import { StyleSheet } from "react-native";
+import React, { useState } from 'react'
+import { ListItem } from 'react-native-elements'
+import { StyleSheet } from 'react-native'
 
 interface Props {
-  score: number;
-  comment: string;
+  score: number
+  comment: string
 }
 
 const ScoreCard = ({ score, comment }: Props) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false)
   return (
     <ListItem
       onPress={() => setExpanded(!expanded)}
@@ -20,13 +20,13 @@ const ScoreCard = ({ score, comment }: Props) => {
         {expanded && <ListItem.Subtitle>{comment}</ListItem.Subtitle>}
       </ListItem.Content>
     </ListItem>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   listItem: {
     width: 300,
   },
-});
+})
 
-export default ScoreCard;
+export default ScoreCard
