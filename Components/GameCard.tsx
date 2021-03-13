@@ -1,37 +1,36 @@
-import React from "react";
-import { Avatar, ListItem } from "react-native-elements";
-import { StyleSheet } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import React from 'react'
+import { Avatar, ListItem } from 'react-native-elements'
+import { StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { Game } from '../models/models'
 
 interface Props {
-  id: number;
-  title: string;
-  image: string;
+  game: Game
 }
 
-const GameCard = ({ id, title, image }: Props) => {
-  const navigation = useNavigation();
+const GameCard = ({ game }: Props) => {
+  const navigation = useNavigation()
   const handleClick = () => {
-    navigation.navigate("Game", { id: id });
-  };
+    navigation.navigate('Game', { game: game })
+  }
   return (
     <ListItem
       onPress={handleClick}
       containerStyle={styles.listItem}
       bottomDivider
     >
-      <Avatar source={{ uri: image }} />
+      <Avatar source={{ uri: game.image }} />
       <ListItem.Content>
-        <ListItem.Title>{title}</ListItem.Title>
+        <ListItem.Title>{game.title}</ListItem.Title>
       </ListItem.Content>
     </ListItem>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   listItem: {
     width: 300,
   },
-});
+})
 
-export default GameCard;
+export default GameCard

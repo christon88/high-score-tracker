@@ -1,18 +1,17 @@
-import React from "react";
-import { scores } from "../data";
-import ScoreCard from "./ScoreCard";
+import React from 'react'
+import { Score } from '../models/models'
+import ScoreCard from './ScoreCard'
 
 interface Props {
-  id: number;
+  scores: Score[]
 }
 
-export default function ScoreList({ id }: Props) {
-  const gameScores = scores.filter((score) => score.gameId === id);
+export default function ScoreList({ scores }: Props) {
   return (
     <>
-      {gameScores.map((score, index) => (
-        <ScoreCard score={score.score} comment={score.comment} key={index} />
+      {scores.map((score, index) => (
+        <ScoreCard score={score.value} comment={score.comment} key={index} />
       ))}
     </>
-  );
+  )
 }

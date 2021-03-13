@@ -1,11 +1,10 @@
 export interface Score {
-    gameId: number;
-    score: number;
-    comment: string;
+  value: number
+  comment: string
 }
 
 export interface Game {
-    id: number;
-    name: string;
-    img: string
+  title: string
+  image: string
+  scores: Score[]
 }
