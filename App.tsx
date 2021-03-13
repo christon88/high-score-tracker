@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from './components/HomeScreen'
 import GamePage from './components/GamePage'
 import { routes } from './router'
+import AddGame from './components/AddGame'
 
 const Stack = createStackNavigator()
 
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name={routes.home} component={HomeScreen} />
           <Stack.Screen name={routes.gamePage} component={GamePage} />
+          <Stack.Screen name={routes.addGame} component={AddGame} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

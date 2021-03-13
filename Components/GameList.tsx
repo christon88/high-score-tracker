@@ -3,6 +3,7 @@ import GameCard from './GameCard'
 
 import { getGames } from '../api/sanity'
 import { Game } from '../models/models'
+import AddGameButton from './AddGameButton'
 
 export default function GameList() {
   const [games, setGames] = useState([] as Game[])
@@ -18,6 +19,7 @@ export default function GameList() {
       {games.map((game, index) => (
         <GameCard game={game} key={index} />
       ))}
+      <AddGameButton />
     </>
   )
 }

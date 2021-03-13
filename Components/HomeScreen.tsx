@@ -6,8 +6,8 @@ import { StatusBar } from 'expo-status-bar'
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <GameList />
       <StatusBar style="auto" />
+      <GameList />
     </View>
   )
 }
