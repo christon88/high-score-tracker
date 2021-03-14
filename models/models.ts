@@ -4,6 +4,13 @@ export interface Score {
 }
 
 export interface Game {
+  _id: string
+  _type: string
+  title: string
+  image: string
+  scores: Score[]
+}
+export interface GameDTO {
   title: string
   image: string
   scores: Score[]

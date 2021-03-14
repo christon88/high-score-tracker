@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import GameCard from './GameCard'
 
-import { getGames } from '../api/sanity'
-import { Game } from '../models/models'
+import useSanity from '../hooks/useSanity'
 import AddGameButton from './AddGameButton'
+import { GameContext } from '../context/gameContext'
 
 export default function GameList() {
-  const [games, setGames] = useState([] as Game[])
+  const { games, setGames } = useContext(GameContext)
+  const { getGames } = useSanity()
   useEffect(() => {
     async function readGames() {
       const storedGames = await getGames()
