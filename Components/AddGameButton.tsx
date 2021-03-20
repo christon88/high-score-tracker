@@ -1,8 +1,7 @@
 import React from 'react'
-import { Avatar, ListItem } from 'react-native-elements'
+import { ListItem } from 'react-native-elements'
 import { StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Game } from '../models/models'
 
 const AddGameButton = () => {
   const navigation = useNavigation()
@@ -16,7 +15,7 @@ const AddGameButton = () => {
       bottomDivider
     >
       <ListItem.Content>
-        <ListItem.Title>+</ListItem.Title>
+        <ListItem.Title>➕</ListItem.Title>
       </ListItem.Content>
     </ListItem>
   )

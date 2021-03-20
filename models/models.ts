@@ -1,5 +1,5 @@
 export interface Score {
-  value: number
+  value: string
   comment: string
 }
 

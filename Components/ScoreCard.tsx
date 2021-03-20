@@ -3,7 +3,7 @@ import { ListItem } from 'react-native-elements'
 import { StyleSheet } from 'react-native'
 
 interface Props {
-  score: number
+  score: string
   comment: string
 }
 

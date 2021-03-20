@@ -32,7 +32,7 @@ export default createSchema({
       name: 'score',
       type: 'object',
       fields: [
-        { title: 'Value', name: 'value', type: 'number' },
+        { title: 'Value', name: 'value', type: 'string' },
         { title: 'Comment', name: 'comment', type: 'string' },
       ],
     },
